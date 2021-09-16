@@ -13,7 +13,7 @@ namespace BeaverCalc
     public static class Addition
     {
         [FunctionName("Addition")]
-        public static async Task<IActionResult> Run(
+        public static  IActionResult Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
             ILogger log)
         {
