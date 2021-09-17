@@ -23,15 +23,10 @@ namespace BeaverCalc
             string second = req.Query["second"];
 
             double varone;
-            if (!double.TryParse(first, out varone)) 
-            {
-                return new BadRequestObjectResult("First value is not a valid number");
-            }
-
             double vartwo;
-            if (!double.TryParse(second, out vartwo))
+            if (!double.TryParse(first, out varone) || !double.TryParse(second, out vartwo)) 
             {
-                return new BadRequestObjectResult("Second value is not a valid number");
+                return new BadRequestObjectResult("No valid input. Please try again.");
             }
 
             return new OkObjectResult($"The result is: {(varone + vartwo).ToString()}");
