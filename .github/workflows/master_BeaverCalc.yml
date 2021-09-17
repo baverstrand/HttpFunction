@@ -11,7 +11,9 @@ on:
 
 env:
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '3.1.x'  # set this to the dotnet version to use
+  # DOTNET_VERSION: '3.1.x'  # set this to the dotnet version to use
+  DOTNET_VERSION: '4.0'  # set this to the dotnet version to use
+
 
 jobs:
   build-and-deploy:
@@ -24,8 +26,8 @@ jobs:
     - name: Setup DotNet v3.1.x Environment
       uses: actions/setup-dotnet@v1
       with:
-        # dotnet-version: ${{ env.DOTNET_VERSION }}
-        dotnet-version: '3.1.x'
+        dotnet-version: '${{ env.DOTNET_VERSION }}'
+        # dotnet-version: '3.1.x'
 
     - name: 'Resolve Project Dependencies Using Dotnet'
       shell: pwsh
