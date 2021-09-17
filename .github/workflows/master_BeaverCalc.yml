@@ -22,7 +22,7 @@ jobs:
 
     # - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
     - name: Setup DotNet v3.1 Environment
-      uses: actions/setup-dotnet@v3.1
+      uses: actions/setup-dotnet@1.2.x
       with:
         # dotnet-version: ${{ env.DOTNET_VERSION }}
         dotnet-version: v3.1
