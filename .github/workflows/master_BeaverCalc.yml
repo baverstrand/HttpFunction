@@ -33,7 +33,7 @@ jobs:
         popd
 
     - name: 'Run Azure Functions Action'
-      uses: Azure/functions-action@1.4.3
+      uses: Azure/functions-action@1.4.*
       id: fa
       with:
         app-name: 'BeaverCalc'
