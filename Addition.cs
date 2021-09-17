@@ -34,7 +34,7 @@ namespace BeaverCalc
                 return new BadRequestObjectResult("Second value is not a valid number");
             }
 
-            return new OkObjectResult((varone + vartwo).ToString());
+            return new OkObjectResult($"Resultatet är {(varone + vartwo).ToString()}");
         }
     }
 }
